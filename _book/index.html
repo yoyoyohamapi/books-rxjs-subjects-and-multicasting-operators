@@ -1,0 +1,402 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>简介 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="1.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter active" data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    01. Observable 与 Observer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    02. Subject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3.md">
+            
+                <span>
+            
+                    
+                    03. 使用 Subject 作为 Event Bus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.md">
+            
+                <span>
+            
+                    
+                    04. BehaviorSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5.md">
+            
+                <span>
+            
+                    
+                    05. ReplaySubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6.md">
+            
+                <span>
+            
+                    
+                    06. AsyncSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7.md">
+            
+                <span>
+            
+                    
+                    07. multicast 及 connect operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.md">
+            
+                <span>
+            
+                    
+                    08. 停止共享 observable 的执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="9.md">
+            
+                <span>
+            
+                    
+                    09. 使用 refcount 来自动停止执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.md">
+            
+                <span>
+            
+                    
+                    10. publish operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11.md">
+            
+                <span>
+            
+                    
+                    11. 使用 Subject 工厂函数来重用 multicasting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12.md">
+            
+                <span>
+            
+                    
+                    12. 使用了 selector 参数的 multicast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13.md">
+            
+                <span>
+            
+                    
+                    13. 总结：什么时候使用 Subject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >简介</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B80;&#x4ECB;">&#x7B80;&#x4ECB;</h1>
+<blockquote>
+<p>&#x8FD9;&#x95E8;&#x8BFE;&#x6765;&#x81EA;&#x4E8E; Andr&#xE9; Staltz &#x5728; egghead.io &#x7684;&#x8BFE;&#x7A0B; <a href="https://egghead.io/courses/rxjs-subjects-and-multicasting-operators" target="_blank">RxJS Subjects and Multicasting Operators</a>&#x3002;</p>
+</blockquote>
+<p>RxJS &#x4E2D;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684; Subject &#x5BF9;&#x521A;&#x5F00;&#x59CB;&#x63A5;&#x89E6; RxJS &#x7684;&#x5F00;&#x53D1;&#x8005;&#x9020;&#x6210;&#x4E86;&#x4E0D;&#x5C0F;&#x7684;&#x56F0;&#x6270;&#x3002;&#x5BF9;&#x5927;&#x591A;&#x6570;&#x5F00;&#x53D1;&#x8005;&#x800C;&#x8A00;&#xFF0C;Subject &#x6216;&#x8BB8;&#x662F;&#x89E3;&#x51B3;&#x8BB8;&#x591A;&#x95EE;&#x9898;&#x6700;&#x597D;&#x7684;&#x7B54;&#x6848;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x552F;&#x4E00;&#x7684;&#x7B54;&#x6848;&#x3002;Subject &#x8DB3;&#x591F;&#x5F3A;&#x5927;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x5FC5;&#x8981;&#x77E5;&#x9053;&#x5728;&#x4EC0;&#x4E48;&#x573A;&#x5408;&#xFF0C;&#x9047;&#x5230;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#x65F6;&#x4F7F;&#x7528; Subject&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x95E8;&#x8BFE;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x6DF1;&#x5165; RxJS &#x7684;&#x5404;&#x4E2A; Subject &#x4EE5;&#x53CA; <strong>&#x5E7F;&#x64AD;</strong> &#x76F8;&#x5173;&#x7684; operator&#xFF0C;&#x501F;&#x6B64;&#xFF0C;&#x4F60;&#x5C06;&#x5BF9;&#x8FD9;&#x4E9B;&#x6982;&#x5FF5;&#x548C;&#x5DE5;&#x5177;&#x6709;&#x4E2A;&#x7262;&#x56FA;&#x7684;&#x8BA4;&#x8BC6;&#xFF0C;&#x77E5;&#x9053;&#x4F55;&#x65F6;&#x3001;&#x4F55;&#x5730;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x5B83;&#x4EEC;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="1.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 01. Observable 与 Observer">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"简介","level":"1.1","depth":1,"next":{"title":"01. Observable 与 Observer","level":"1.2","depth":1,"path":"1.md","ref":"1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2017-05-31T01:28:26.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-31T01:49:39.060Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

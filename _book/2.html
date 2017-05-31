@@ -1,0 +1,661 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>02. Subject · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3.md" />
+    
+    
+    <link rel="prev" href="1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="1.html">
+            
+                <a href="1.html">
+            
+                    
+                    01. Observable 与 Observer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="2.html">
+            
+                <a href="2.html">
+            
+                    
+                    02. Subject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="3.md">
+            
+                <span>
+            
+                    
+                    03. 使用 Subject 作为 Event Bus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="4.md">
+            
+                <span>
+            
+                    
+                    04. BehaviorSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="5.md">
+            
+                <span>
+            
+                    
+                    05. ReplaySubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="6.md">
+            
+                <span>
+            
+                    
+                    06. AsyncSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="7.md">
+            
+                <span>
+            
+                    
+                    07. multicast 及 connect operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="8.md">
+            
+                <span>
+            
+                    
+                    08. 停止共享 observable 的执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="9.md">
+            
+                <span>
+            
+                    
+                    09. 使用 refcount 来自动停止执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10.md">
+            
+                <span>
+            
+                    
+                    10. publish operator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11.md">
+            
+                <span>
+            
+                    
+                    11. 使用 Subject 工厂函数来重用 multicasting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12.md">
+            
+                <span>
+            
+                    
+                    12. 使用了 selector 参数的 multicast
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13.md">
+            
+                <span>
+            
+                    
+                    13. 总结：什么时候使用 Subject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >02. Subject</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="subject">Subject</h1>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5B9E;&#x73B0;&#x4E24;&#x4E2A;&#x4E00;&#x4E2A; Observable &#x5BF9;&#x8C61;&#x80FD;&#x591F;&#x5E7F;&#x64AD;&#x4E24;&#x4E2A; Observer&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> observable = Rx.Observable.interval(<span class="hljs-number">1000</span>).take(<span class="hljs-number">6</span>);
+
+<span class="hljs-keyword">const</span> observerA = {
+  next: x =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`A next <span class="hljs-subst">${x}</span>`</span>);
+    observerB.next(x);
+  },
+  error: e =&gt; {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`A error <span class="hljs-subst">${e}</span>`</span>);
+    observerB.error(e);
+  },
+  complete: () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;A done&apos;</span>);
+    observerB.complete();
+  }
+};
+
+observable.subscribe(observerA);
+
+<span class="hljs-keyword">const</span> observerB = {
+  next: x =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`B next <span class="hljs-subst">${x}</span>`</span>),
+  error: e =&gt; <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`B error <span class="hljs-subst">${e}</span>`</span>),
+  complete: () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;B done&apos;</span>)
+};
+</code></pre>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8FD8;&#x60F3;&#x5E7F;&#x64AD;&#x7B2C;&#x4E09;&#x4E2A;&#x3001;&#x7B2C;&#x56DB;&#x4E2A;&#x3001;&#x7B2C; n &#x4E2A; Observer&#xFF0C;&#x5219;&#x53EA;&#x80FD;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> observable = Rx.Observable.interval(<span class="hljs-number">1000</span>).take(<span class="hljs-number">6</span>);
+
+<span class="hljs-keyword">const</span> observerA = {
+  next: x =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`A next <span class="hljs-subst">${x}</span>`</span>);
+    observerB.next(x);
+    observerC.next(x);
+    observerD.next(x);
+    <span class="hljs-comment">// ....</span>
+    observerXXX.next(x);
+  },
+  error: e =&gt; {
+    <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`A error <span class="hljs-subst">${e}</span>`</span>);
+    observerB.error(e);
+    observerC.error(e);
+    observerD.error(e);
+    <span class="hljs-comment">// ....</span>
+    observerXXX.error(e);
+  },
+  complete: () =&gt; {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;A done&apos;</span>);
+    observerB.complete();
+    observerC.complete();
+    observerD.complete();
+    <span class="hljs-comment">// ....</span>
+    observerXXX.complete();
+  }
+};
+
+observable.subscribe(observerA);
+
+<span class="hljs-keyword">const</span> observerB = {
+  next: x =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`B next <span class="hljs-subst">${x}</span>`</span>),
+  error: e =&gt; <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`B error <span class="hljs-subst">${e}</span>`</span>),
+  complete: () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;B done&apos;</span>)
+};
+</code></pre>
+<p>&#x5F88;&#x74DC;&#x76AE;&#x7684;&#x505A;&#x6CD5;&#xFF0C;&#x4F46;&#x4E5F;&#x7ED9;&#x4E86;&#x6211;&#x4EEC;&#x542F;&#x53D1;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x4E2D;&#x4ECB;&#x89C2;&#x5BDF;&#x8005;&#xFF0C;&#x4ED6;&#x4E3B;&#x8981;&#x5B8C;&#x6210;&#x4E24;&#x4EF6;&#x4E8B;&#x513F;&#xFF1A;</p>
+<ul>
+<li>&#x89C2;&#x5BDF; <code>observable</code>&#x3002;</li>
+<li>&#x4FDD;&#x5B58;&#x4E86;&#x4E00;&#x4E2A;&#x89C2;&#x5BDF;&#x8005;&#x5217;&#x8868;&#xFF0C;&#x5F53;&#x89C2;&#x5BDF;&#x5230; <code>observable</code> &#x53D8;&#x52A8;&#x65F6;&#xFF0C;&#x7531;&#x4E2D;&#x4ECB;&#x5E7F;&#x64AD;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x89C2;&#x5BDF;&#x8005;&#x3002;</li>
+</ul>
+<div style="text-align:center">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" viewbox="165 39 461 337" width="300pt" height="337pt" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata> Produced by OmniGraffle 7.2
+    <dc:date>2017-05-31 02:36:50 +0000</dc:date>
+  </metadata>
+  <defs>
+    <font-face font-family="Helvetica Neue" font-size="16" panose-1="2 0 5 3 0 0 0 2 0 4" units-per-em="1000" underline-position="-100" underline-thickness="50" slope="0" x-height="517" cap-height="714" ascent="951.9958" descent="-212.99744" font-weight="500">
+      <font-face-src>
+        <font-face-name name="HelveticaNeue">
+      </font-face-name></font-face-src>
+    </font-face>
+    <font-face font-family="PingFang SC" font-size="16" panose-1="2 11 4 0 0 0 0 0 0 0" units-per-em="1000" underline-position="-150" underline-thickness="58" slope="0" x-height="600" cap-height="860" ascent="1060.0021" descent="-340.0007" font-weight="500">
+      <font-face-src>
+        <font-face-name name="PingFangSC-Regular">
+      </font-face-name></font-face-src>
+    </font-face>
+    <marker orient="auto" overflow="visible" markerunits="strokeWidth" id="FilledArrow_Marker" viewbox="-9 -4 10 8" markerwidth="10" markerheight="8" color="black">
+      <g>
+        <path d="M -8 0 L 0 3 L 0 -3 Z" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      </g>
+    </marker>
+  </defs>
+  <g stroke="none" stroke-opacity="1" stroke-dasharray="none" fill="none" fill-opacity="1">
+    <title>&#x7248;&#x9762; 1</title>
+    <g>
+      <title>&#x56FE;&#x5C42; 1</title>
+      <circle cx="386.75" cy="98.75" r="58.750094" fill="#40ff40"/>
+      <circle cx="386.75" cy="98.75" r="58.750094" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(344.75 89.526)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="2.592" y="15" textlength="78.816">observable</tspan>
+      </text>
+      <rect x="293.5" y="190.5" width="195" height="80" fill="yellow"/>
+      <rect x="293.5" y="190.5" width="195" height="80" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(298.5 219.5)" fill="black">
+        <tspan font-family="PingFang SC" font-size="16" font-weight="500" fill="black" x="52.5" y="17" textlength="80">&#x4E2D;&#x4ECB;&#x89C2;&#x5BDF;&#x8005;</tspan>
+      </text>
+      <rect x="166" y="334" width="102" height="41" fill="#ffc0c0"/>
+      <rect x="166" y="334" width="102" height="41" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(171 345.276)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="10.296" y="15" textlength="71.408">observer1</tspan>
+      </text>
+      <rect x="298" y="334" width="102" height="41" fill="#ffc0c0"/>
+      <rect x="298" y="334" width="102" height="41" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(303 345.276)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="10.296" y="15" textlength="71.408">observer2</tspan>
+      </text>
+      <rect x="523.5" y="334" width="102" height="41" fill="#ffc0c0"/>
+      <rect x="523.5" y="334" width="102" height="41" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(528.5 345.276)" fill="black">
+        <tspan font-family="Helvetica Neue" font-size="16" font-weight="500" fill="black" x="8.968" y="15" textlength="74.064">observerN</tspan>
+      </text>
+      <line x1="253.82835" y1="328.2545" x2="334.87097" y2="270.5" marker-start="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      <line x1="535.96056" y1="328.457" x2="450.19355" y2="270.5" marker-start="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      <line x1="389.3905" y1="180.60515" x2="388.6442" y2="157.46968" marker-start="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      <line x1="359.11954" y1="324.62327" x2="377.4516" y2="270.5" marker-start="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+      <rect x="410.75" y="334" width="102" height="41" fill="#ffc0c0"/>
+      <rect x="410.75" y="334" width="102" height="41" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <text transform="translate(415.75 343.5)" fill="black">
+        <tspan font-family="PingFang SC" font-size="16" font-weight="500" x="38" y="17" textlength="16">&#x2026;</tspan>
+      </text>
+      <line x1="445.14725" y1="325.4012" x2="413.8226" y2="270.5" marker-start="url(#FilledArrow_Marker)" stroke="black" stroke-linecap="round" stroke-linejoin="miter" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
+</div>
+
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> observable = Rx.Observable.interval(<span class="hljs-number">1000</span>).take(<span class="hljs-number">6</span>);
+
+<span class="hljs-keyword">const</span> bridgeObserver = {
+  observers: [],
+  next: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">v</span>) </span>{
+    <span class="hljs-keyword">this</span>.observers.forEach(observer =&gt; observer.next(v));
+  },
+  error: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-keyword">this</span>.observers.forEach(observer =&gt; observer.error(e));
+  },
+  complete: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.observers.forEach(observer =&gt; observer.complete());
+  },
+  addObserver: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">observer</span>) </span>{
+    <span class="hljs-keyword">this</span>.observers.push(observer);
+  }
+};
+
+<span class="hljs-keyword">const</span> observerA = {
+  next: x =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`A next <span class="hljs-subst">${x}</span>`</span>),
+  error: e =&gt; <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`A error <span class="hljs-subst">${e}</span>`</span>),
+  complete: () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;A done&apos;</span>)
+};
+
+observable.subscribe(bridgeObserver);
+bridgeObserver.addObserver(observerA);
+
+<span class="hljs-keyword">const</span> observerB = {
+  next: x =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`B next <span class="hljs-subst">${x}</span>`</span>),
+  error: e =&gt; <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`B error <span class="hljs-subst">${e}</span>`</span>),
+  complete: () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;B done&apos;</span>)
+};
+
+setTimeout(() =&gt; {
+  bridgeObserver.addObserver(observerB);
+}, <span class="hljs-number">2000</span>);
+
+<span class="hljs-comment">/* &#x7A0B;&#x5E8F;&#x8F93;&#x51FA;&#xFF1A;
+  &quot;A next 0&quot;
+  &quot;A next 1&quot;
+  &quot;A next 2&quot;
+  &quot;B next 2&quot;
+  &quot;A next 3&quot;
+  &quot;B next 3&quot;
+  &quot;A next 4&quot;
+  &quot;B next 4&quot;
+  &quot;A next 5&quot;
+  &quot;B next 5&quot;
+  &quot;A done&quot;
+  &quot;B done&quot;
+ */</span>
+</code></pre>
+<p><a href="http://jsbin.com/nesazu/9/edit?js,console" target="_blank">&#x67E5;&#x770B;&#x4F8B;&#x5B50;</a></p>
+<p>&#x6211;&#x4EEC;&#x770B;&#x5230;&#xFF0C;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x89C2;&#x5BDF;&#x8005;&#x5B9E;&#x9645;&#x4E0A;&#x4E5F;&#x662F;&#x5728; <strong>&#x89C2;&#x5BDF;&#x7740;</strong> &#x4E2D;&#x4ECB;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x59A8;&#x5C06; <code>addObserver</code> &#x547D;&#x540D;&#x4E3A; <code>subscribe</code>&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> bridgeObserver = {
+  observers: [],
+  next: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">v</span>) </span>{
+    <span class="hljs-keyword">this</span>.observers.forEach(observer =&gt; observer.next(v));
+  },
+  error: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    <span class="hljs-keyword">this</span>.observers.forEach(observer =&gt; observer.error(e));
+  },
+  complete: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">this</span>.observers.forEach(observer =&gt; observer.complete());
+  },
+  subscribe: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">observer</span>) </span>{
+    <span class="hljs-keyword">this</span>.observers.push(observer);
+  }
+};
+
+<span class="hljs-comment">// ...</span>
+
+observable.subscribe(bridgeObserver);
+bridgeObserver.subscribe(observerA);
+
+<span class="hljs-comment">// ....</span>
+
+setTimeout(() =&gt; {
+  bridgeObserver.subscribe(observerB);
+}, <span class="hljs-number">2000</span>);
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E2D;&#x4ECB;&#x4FBF;&#x6210;&#x4E3A;&#x4E86;&#x4E00;&#x4E2A;&#x53EF;&#x4F9B;&#x89C2;&#x5BDF;&#x7684; Observable&#xFF0C;&#x518D;&#x8003;&#x8651;&#x5230;&#x4E2D;&#x4ECB;&#x4E5F;&#x5728;&#x89C2;&#x5BDF;&#x8005;&#x67D0;&#x4E2A; Observable&#xFF0C;&#x4ED6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x53CC;&#x91CD;&#x8EAB;&#x4EFD;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x65E2;&#x662F; Observable &#x5BF9;&#x8C61;&#xFF0C;&#x53C8;&#x662F; Observer &#x5BF9;&#x8C61;&#x3002;RxJS &#x4E5F;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x53CC;&#x91CD;&#x8EAB;&#x4EFD;&#x7684;&#x5BF9;&#x8C61; -- Subject&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> observable = Rx.Observable.interval(<span class="hljs-number">1000</span>).take(<span class="hljs-number">6</span>);
+
+<span class="hljs-keyword">const</span> subject = <span class="hljs-keyword">new</span> Rx.Subject();
+
+<span class="hljs-keyword">const</span> observerA = {
+  next: x =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`A next <span class="hljs-subst">${x}</span>`</span>),
+  error: e =&gt; <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`A error <span class="hljs-subst">${e}</span>`</span>),
+  complete: () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;A done&apos;</span>)
+};
+
+observable.subscribe(subject);
+subject.subscribe(observerA);
+
+<span class="hljs-keyword">const</span> observerB = {
+  next: x =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`B next <span class="hljs-subst">${x}</span>`</span>),
+  error: e =&gt; <span class="hljs-built_in">console</span>.error(<span class="hljs-string">`B error <span class="hljs-subst">${e}</span>`</span>),
+  complete: () =&gt; <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;B done&apos;</span>)
+};
+
+setTimeout(() =&gt; {
+  subject.subscribe(observerB);
+}, <span class="hljs-number">2000</span>);
+
+<span class="hljs-comment">/* &#x7A0B;&#x5E8F;&#x8F93;&#x51FA;&#xFF1A;
+  &quot;A next 0&quot;
+  &quot;A next 1&quot;
+  &quot;A next 2&quot;
+  &quot;B next 2&quot;
+  &quot;A next 3&quot;
+  &quot;B next 3&quot;
+  &quot;A next 4&quot;
+  &quot;B next 4&quot;
+  &quot;A next 5&quot;
+  &quot;B next 5&quot;
+  &quot;A done&quot;
+  &quot;B done&quot;
+ */</span>
+</code></pre>
+<p><a href="http://jsbin.com/nesazu/10/edit?js,console" target="_blank">&#x67E5;&#x770B;&#x4F8B;&#x5B50;</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1.html" class="navigation navigation-prev " aria-label="Previous page: 01. Observable 与 Observer">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3.md" class="navigation navigation-next " aria-label="Next page: 03. 使用 Subject 作为 Event Bus">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"02. Subject","level":"1.3","depth":1,"next":{"title":"03. 使用 Subject 作为 Event Bus","level":"1.4","depth":1,"path":"3.md","ref":"3.md","articles":[]},"previous":{"title":"01. Observable 与 Observer","level":"1.2","depth":1,"path":"1.md","ref":"1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2.md","mtime":"2017-05-31T02:45:01.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-05-31T01:49:39.060Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
